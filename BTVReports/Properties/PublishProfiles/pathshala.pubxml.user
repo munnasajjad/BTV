@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Nazrul\BTV_Published\RptPublished\123</_PublishTargetUrl>
+    <History>True|2022-02-09T06:51:14.1896092Z;True|2022-02-09T12:16:46.2868189+06:00;True|2022-02-08T23:23:32.7525169+06:00;True|2022-01-29T19:14:01.2958686+06:00;True|2022-01-29T19:05:45.6043778+06:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="app/AccLink.aspx">
+      <publishTime>04/17/2015 23:25:30</publishTime>
+    </File>
+    <File Include="app/AddNewBook.aspx">
+      <publishTime>03/20/2015 22:40:25</publishTime>
+    </File>
+    <File Include="app/Admission.aspx">
+      <publishTime>07/25/2015 23:55:14</publishTime>
+    </File>
+    <File Include="app/Admit-Card.aspx">
+      <publishTime>04/19/2015 16:20:12</publishTime>
+    </File>
+    <File Include="app/AssaignClassExpenses.aspx">
+      <publishTime>09/12/2015 02:45:46</publishTime>
+    </File>
+    <File Include="app/AssaignOtherExpenses.aspx">
+      <publishTime>04/16/2015 01:20:35</publishTime>
+    </File>
+    <File Include="app/AssaignStudentExpenses.aspx">
+      <publishTime>04/16/2015 01:20:36</publishTime>
+    </File>
+    <File Include="app/Assign-Roll-Section.aspx">
+      <publishTime>07/29/2015 15:01:55</publishTime>
+    </File>
+    <File Include="app/Billing.aspx">
+      <publishTime>09/12/2015 02:45:42</publishTime>
+    </File>
+    <File Include="app/BookGiven.aspx">
+      <publishTime>03/20/2015 22:40:26</publishTime>
+    </File>
+    <File Include="app/BookTaken.aspx">
+      <publishTime>03/20/2015 22:40:26</publishTime>
+    </File>
+    <File Include="app/ChangePass.aspx">
+      <publishTime>03/20/2015 23:17:05</publishTime>
+    </File>
+    <File Include="app/ChangeRollClass.aspx">
+      <publishTime>04/16/2015 01:55:29</publishTime>
+    </File>
+    <File Include="app/ClassSetup.aspx">
+      <publishTime>04/16/2015 20:55:16</publishTime>
+    </File>
+    <File Include="app/Coll-Group.aspx">
+      <publishTime>05/09/2015 14:21:22</publishTime>
+    </File>
+    <File Include="app/Coll-Heads.aspx">
+      <publishTime>09/24/2015 05:46:16</publishTime>
+    </File>
+    <File Include="app/Coll-History.aspx">
+      <publishTime>09/09/2015 01:01:10</publishTime>
+    </File>
+    <File Include="app/Control.aspx">
+      <publishTime>03/20/2015 22:40:26</publishTime>
+    </File>
+    <File Include="app/Default.aspx">
+      <publishTime>04/16/2015 01:06:47</publishTime>
+    </File>
+    <File Include="app/DefaulterList.aspx">
+      <publishTime>03/20/2015 22:40:26</publishTime>
+    </File>
+    <File Include="app/DiscountToStudents.aspx">
+      <publishTime>09/12/2015 00:20:07</publishTime>
+    </File>
+    <File Include="app/Exp-Group.aspx">
+      <publishTime>09/08/2015 05:43:50</publishTime>
+    </File>
+    <File Include="app/Exp-Heads.aspx">
+      <publishTime>09/08/2015 05:20:23</publishTime>
+    </File>
+    <File Include="app/Exp-History.aspx">
+      <publishTime>09/09/2015 01:01:10</publishTime>
+    </File>
+    <File Include="app/Expense-Entry.aspx">
+      <publishTime>09/08/2015 06:14:57</publishTime>
+    </File>
+    <File Include="app/Gateway-Settings.aspx">
+      <publishTime>09/20/2015 17:16:28</publishTime>
+    </File>
+    <File Include="app/Head.aspx">
+      <publishTime>04/13/2015 19:43:17</publishTime>
+    </File>
+    <File Include="app/ID-Card.aspx">
+      <publishTime>04/11/2015 01:50:56</publishTime>
+    </File>
+    <File Include="app/images/approve.gif">
+      <publishTime>03/21/2015 00:29:47</publishTime>
+    </File>
+    <File Include="app/images/avatar.jpg">
+      <publishTime>03/20/2015 23:06:28</publishTime>
+    </File>
+    <File Include="app/images/back32.png">
+      <publishTime>03/21/2015 00:29:47</publishTime>
+    </File>
+    <File Include="app/images/delete.gif">
+      <publishTime>03/21/2015 00:29:47</publishTime>
+    </File>
+    <File Include="app/images/delete.png">
+      <publishTime>03/20/2015 23:06:28</publishTime>
+    </File>
+    <File Include="app/images/edit.png">
+      <publishTime>03/20/2015 23:06:28</publishTime>
+    </File>
+    <File Include="app/images/for.jpg">
+      <publishTime>03/20/2015 23:06:28</publishTime>
+    </File>
+    <File Include="app/images/id-bg.png">
+      <publishTime>04/11/2015 03:24:28</publishTime>
+    </File>
+    <File Include="app/Layout.Master">
+      <publishTime>09/12/2015 02:42:08</publishTime>
+    </File>
+    <File Include="app/loader.gif">
+      <publishTime>03/20/2015 22:17:16</publishTime>
+    </File>
+    <File Include="app/Login-History.aspx">
+      <publishTime>03/20/2015 23:48:39</publishTime>
+    </File>
+    <File Include="app/Logout.aspx">
+      <publishTime>09/09/2015 01:38:40</publishTime>
+    </File>
+    <File Include="app/Money-Collection.aspx">
+      <publishTime>04/16/2015 01:20:36</publishTime>
+    </File>
+    <File Include="app/MonthlyProcess.aspx">
+      <publishTime>04/16/2015 01:20:36</publishTime>
+    </File>
+    <File Include="app/MonthlyProcessSetup.aspx">
+      <publishTime>04/16/2015 01:20:38</publishTime>
+    </File>
+    <File Include="app/New-User.aspx">
+      <publishTime>09/09/2015 01:10:44</publishTime>
+    </File>
+    <File Include="app/Particulars.aspx">
+      <publishTime>03/20/2015 22:40:26</publishTime>
+    </File>
+    <File Include="app/Reports/crAdmitCard.rpt">
+      <publishTime>09/08/2015 04:44:54</publishTime>
+    </File>
+    <File Include="app/Reports/rptAdmitCard.aspx">
+      <publishTime>09/08/2015 03:55:04</publishTime>
+    </File>
+    <File Include="app/Reports/rptIdCard.aspx">
+      <publishTime>04/19/2015 18:45:21</publishTime>
+    </File>
+    <File Include="app/Reports/rptInvoice.aspx">
+      <publishTime>07/31/2015 17:29:29</publishTime>
+    </File>
+    <File Include="app/Reports/rptStudents.aspx">
+      <publishTime>03/21/2015 01:46:47</publishTime>
+    </File>
+    <File Include="app/Search.aspx">
+      <publishTime>05/09/2015 15:54:57</publishTime>
+    </File>
+    <File Include="app/SectionSetup.aspx">
+      <publishTime>09/07/2015 03:58:06</publishTime>
+    </File>
+    <File Include="app/Send-SMS.aspx">
+      <publishTime>09/08/2015 19:04:32</publishTime>
+    </File>
+    <File Include="app/SMS-Template.aspx">
+      <publishTime>09/07/2015 04:15:53</publishTime>
+    </File>
+    <File Include="app/Student-Info.aspx">
+      <publishTime>09/08/2015 04:40:02</publishTime>
+    </File>
+    <File Include="app/Student-List.aspx">
+      <publishTime>07/29/2015 14:56:25</publishTime>
+    </File>
+    <File Include="app/SubAcc.aspx">
+      <publishTime>03/20/2015 22:40:26</publishTime>
+    </File>
+    <File Include="app/Teachers.aspx">
+      <publishTime>04/16/2015 21:04:30</publishTime>
+    </File>
+    <File Include="app/VoucherApproval.aspx">
+      <publishTime>03/20/2015 22:40:27</publishTime>
+    </File>
+    <File Include="app/VoucherCancel.aspx">
+      <publishTime>03/20/2015 22:40:27</publishTime>
+    </File>
+    <File Include="app/VoucherEntry.aspx">
+      <publishTime>03/20/2015 22:40:35</publishTime>
+    </File>
+    <File Include="app/web.config">
+      <publishTime>03/20/2015 22:17:16</publishTime>
+    </File>
+    <File Include="app/YearlyProcess.aspx">
+      <publishTime>09/12/2015 05:13:07</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>01/24/2015 17:32:24</publishTime>
+    </File>
+    <File Include="bin/AjaxMin.dll">
+      <publishTime>07/24/2013 15:44:14</publishTime>
+    </File>
+    <File Include="bin/app/Reports/crAdmitCard.rpt">
+      <publishTime>09/08/2015 04:44:54</publishTime>
+    </File>
+    <File Include="bin/app/Reports/crIDCard.rpt">
+      <publishTime>09/08/2015 03:18:55</publishTime>
+    </File>
+    <File Include="bin/app/Reports/Invoice.rpt">
+      <publishTime>09/08/2015 04:30:31</publishTime>
+    </File>
+    <File Include="bin/App_Code.compiled">
+      <publishTime>02/09/2022 12:51:09</publishTime>
+    </File>
+    <File Include="bin/App_Code.dll">
+      <publishTime>02/09/2022 12:51:09</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.CrystalReports.Design.dll">
+      <publishTime>09/21/2016 04:23:52</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.CrystalReports.Engine.dll">
+      <publishTime>09/24/2020 19:24:08</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Data.AdoDotNetInterop.dll">
+      <publishTime>09/21/2016 03:56:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ClientDoc.dll">
+      <publishTime>06/15/2016 04:39:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommLayer.dll">
+      <publishTime>06/15/2016 04:39:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommonControls.dll">
+      <publishTime>06/15/2016 04:39:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommonObjectModel.dll">
+      <publishTime>06/15/2016 04:39:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.Controllers.dll">
+      <publishTime>06/15/2016 04:39:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CubeDefModel.dll">
+      <publishTime>06/15/2016 04:39:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.DataDefModel.dll">
+      <publishTime>06/15/2016 04:39:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.DataSetConversion.dll">
+      <publishTime>09/21/2016 04:23:54</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ObjectFactory.dll">
+      <publishTime>09/24/2020 19:24:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.Prompting.dll">
+      <publishTime>09/24/2020 19:24:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ReportDefModel.dll">
+      <publishTime>06/15/2016 04:39:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.XmlSerialize.dll">
+      <publishTime>06/15/2016 04:39:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportSource.dll">
+      <publishTime>09/24/2020 19:24:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Shared.dll">
+      <publishTime>09/24/2020 19:24:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.VSDesigner.dll">
+      <publishTime>09/21/2016 04:23:52</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Web.dll">
+      <publishTime>09/24/2020 19:24:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Windows.Forms.dll">
+      <publishTime>09/21/2016 04:23:54</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Data.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:26:17</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.DataAccess.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:26:25</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Office.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:27</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.PivotGrid.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:28:59</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Printing.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:33</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.RichEdit.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:29:08</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Sparkline.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:56</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:24:53</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Xpo.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:28:32</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraCharts.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:28:44</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraGauges.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:28:55</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:29:01</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v14.1.Web.resources.dll">
+      <publishTime>12/16/2014 01:29:03</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Charts.v14.1.Core.dll">
+      <publishTime>12/16/2014 01:28:41</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.v14.1.dll">
+      <publishTime>12/16/2014 01:26:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataAccess.v14.1.dll">
+      <publishTime>12/16/2014 01:26:25</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Office.v14.1.Core.dll">
+      <publishTime>12/16/2014 01:27:27</publishTime>
+    </File>
+    <File Include="bin/DevExpress.PivotGrid.v14.1.Core.dll">
+      <publishTime>12/16/2014 01:28:59</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Printing.v14.1.Core.dll">
+      <publishTime>12/16/2014 01:27:33</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v14.1.Core.dll">
+      <publishTime>12/16/2014 01:29:08</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Sparkline.v14.1.Core.dll">
+      <publishTime>12/16/2014 01:27:56</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxThemes.v14.1.dll">
+      <publishTime>12/16/2014 01:25:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.v14.1.dll">
+      <publishTime>12/16/2014 01:24:55</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Xpo.v14.1.dll">
+      <publishTime>12/16/2014 01:28:34</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v14.1.dll">
+      <publishTime>12/16/2014 01:28:45</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraGauges.v14.1.Core.dll">
+      <publishTime>12/16/2014 01:28:55</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v14.1.dll">
+      <publishTime>12/16/2014 01:29:01</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v14.1.Web.dll">
+      <publishTime>12/16/2014 01:29:03</publishTime>
+    </File>
+    <File Include="bin/EnvDTE.dll">
+      <publishTime>01/25/2021 23:45:35</publishTime>
+    </File>
+    <File Include="bin/EnvDTE80.dll">
+      <publishTime>01/25/2021 23:45:35</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Data.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:26:19</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.DataAccess.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:26:25</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Office.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:27</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.PivotGrid.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:28:59</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Printing.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:33</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.RichEdit.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:29:08</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Sparkline.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:57</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:24:56</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Xpo.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:28:35</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraCharts.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:28:46</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraGauges.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:28:56</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:29:01</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v14.1.Web.resources.dll">
+      <publishTime>12/16/2014 01:29:03</publishTime>
+    </File>
+    <File Include="bin/FlashControlV71.dll">
+      <publishTime>09/21/2016 04:23:54</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Data.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:26:19</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.DataAccess.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:26:25</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Office.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:28</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.PivotGrid.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:29:00</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Printing.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:33</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.RichEdit.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:29:08</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Sparkline.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:57</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:24:57</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Xpo.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:28:35</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraCharts.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:28:46</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraGauges.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:28:56</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:29:01</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v14.1.Web.resources.dll">
+      <publishTime>12/16/2014 01:29:05</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualStudio.OLE.Interop.dll">
+      <publishTime>01/25/2021 23:45:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualStudio.Shell.Interop.dll">
+      <publishTime>01/25/2021 23:45:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualStudio.TemplateWizardInterface.dll">
+      <publishTime>05/30/2015 12:09:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualStudio.TextManager.Interop.dll">
+      <publishTime>01/25/2021 23:45:35</publishTime>
+    </File>
+    <File Include="bin/NotesForGallery.dll">
+      <publishTime>01/24/2015 17:32:24</publishTime>
+    </File>
+    <File Include="bin/Oxford.dll">
+      <publishTime>02/09/2022 12:51:06</publishTime>
+    </File>
+    <File Include="bin/Oxford.pdb">
+      <publishTime>02/09/2022 12:51:06</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Data.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:26:19</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.DataAccess.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:26:25</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Office.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:28</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.PivotGrid.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:29:00</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Printing.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:33</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.RichEdit.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:29:08</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Sparkline.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:27:57</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:24:58</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Xpo.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:28:37</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraCharts.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:28:47</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraGauges.v14.1.Core.resources.dll">
+      <publishTime>12/16/2014 01:28:56</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v14.1.resources.dll">
+      <publishTime>12/16/2014 01:29:01</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v14.1.Web.resources.dll">
+      <publishTime>12/16/2014 01:29:05</publishTime>
+    </File>
+    <File Include="bin/ShockwaveFlashObjects.dll">
+      <publishTime>09/24/2020 19:24:10</publishTime>
+    </File>
+    <File Include="bin/stdole.dll">
+      <publishTime>01/07/2022 21:57:17</publishTime>
+    </File>
+    <File Include="bin/VSLangProj.dll">
+      <publishTime>01/25/2021 23:45:35</publishTime>
+    </File>
+    <File Include="bin/VsWebSite.Interop.dll">
+      <publishTime>01/25/2021 23:49:28</publishTime>
+    </File>
+    <File Include="css/app.v1.css">
+      <publishTime>09/08/2015 05:07:03</publishTime>
+    </File>
+    <File Include="css/app.v1.js">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="css/Custom.css">
+      <publishTime>09/07/2015 03:50:14</publishTime>
+    </File>
+    <File Include="css/font.css">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="css/img/error-s.png">
+      <publishTime>03/21/2015 01:15:29</publishTime>
+    </File>
+    <File Include="css/img/error.png">
+      <publishTime>03/21/2015 01:15:29</publishTime>
+    </File>
+    <File Include="css/img/good-warning-error.png">
+      <publishTime>03/21/2015 01:15:29</publishTime>
+    </File>
+    <File Include="css/img/info.png">
+      <publishTime>03/21/2015 01:15:29</publishTime>
+    </File>
+    <File Include="css/img/info2.png">
+      <publishTime>03/21/2015 01:15:29</publishTime>
+    </File>
+    <File Include="css/img/stop.png">
+      <publishTime>03/21/2015 01:15:29</publishTime>
+    </File>
+    <File Include="css/img/success.png">
+      <publishTime>03/21/2015 01:15:29</publishTime>
+    </File>
+    <File Include="css/img/warning-error.png">
+      <publishTime>03/21/2015 01:15:29</publishTime>
+    </File>
+    <File Include="css/img/warning.png">
+      <publishTime>03/21/2015 01:15:29</publishTime>
+    </File>
+    <File Include="css/select2-spinner.html">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="css/select2.html">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="css/select2x2.html">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>03/20/2015 22:40:27</publishTime>
+    </File>
+    <File Include="font/fontawesome-webfont.eot">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="font/fontawesome-webfont.eot%40">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="font/fontawesome-webfont.svg">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="font/fontawesome-webfont.ttf">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="font/fontawesome-webfont.woff">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="js/apps/notes.js">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="js/apps/notify.min.js">
+      <publishTime>09/12/2015 02:19:09</publishTime>
+    </File>
+    <File Include="js/apps/tasks.js">
+      <publishTime>01/24/2015 15:49:26</publishTime>
+    </File>
+    <File Include="js/jquery-latest.min.js">
+      <publishTime>07/28/2015 02:44:18</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>03/20/2015 22:40:36</publishTime>
+    </File>
+    <File Include="Pathshala.xsc">
+      <publishTime>09/08/2015 01:47:04</publishTime>
+    </File>
+    <File Include="Pathshala.xss">
+      <publishTime>09/08/2015 01:47:04</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>02/09/2022 12:51:07</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/29/2022 19:05:41</publishTime>
+    </File>
+    <File Include="XerpDataSet.xsc">
+      <publishTime>01/23/2022 16:26:39</publishTime>
+    </File>
+    <File Include="XerpDataSet.xss">
+      <publishTime>01/23/2022 16:26:39</publishTime>
+    </File>
+    <File Include="XerpReports/AirConditionFCUReport.aspx">
+      <publishTime>10/15/2021 21:42:14</publishTime>
+    </File>
+    <File Include="XerpReports/AirHandlingUnitReport.aspx">
+      <publishTime>10/18/2021 22:48:55</publishTime>
+    </File>
+    <File Include="XerpReports/ChillerReport.aspx">
+      <publishTime>10/21/2021 19:01:35</publishTime>
+    </File>
+    <File Include="XerpReports/DailyMaintenanceReport.aspx">
+      <publishTime>10/17/2021 16:51:23</publishTime>
+    </File>
+    <File Include="XerpReports/DailyPrdnAllShift.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/DailyTransmitterReport.aspx">
+      <publishTime>01/23/2022 15:22:18</publishTime>
+    </File>
+    <File Include="XerpReports/DehumidiferReport.aspx">
+      <publishTime>10/15/2021 20:18:03</publishTime>
+    </File>
+    <File Include="XerpReports/DeliveryReport.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/EarthStationReport.aspx">
+      <publishTime>10/11/2021 15:27:11</publishTime>
+    </File>
+    <File Include="XerpReports/FormAccHeadLedger.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormAccHeadQtyLedger.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormBalanceSheet.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormBankBook.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormChartOfAccounts.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormCollectionSummByCustomers.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormControlAccSummery.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormControlBalance.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormCurrent-Stock-Raw.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormCurrentStockFinished.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormCurrentStockMachineries.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormCurrentStockOthers.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormCurrentStockProcessed.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormCurrentStockWastage.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormCustomerLadger.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormDailyPrdn.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormIncomeStatement.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormItem-Purchase-History.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormPlasticContainerHistory.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormPlasticFinishingProduction.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormQtyDateLedger.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormRawStockConsumptionReport.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormSale-Type-Year.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormSalesbyBrand.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormStockInOut.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormTradeReceivables.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/FormTrialBalance.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/frmChallan.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/frmInvoice-nvat.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/frmInvoice.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/frmSalesStatement.aspx">
+      <publishTime>10/16/2019 15:47:52</publishTime>
+    </File>
+    <File Include="XerpReports/GRNRegister.aspx">
+      <publishTime>10/11/2021 15:14:52</publishTime>
+    </File>
+    <File Include="XerpReports/GRNReport.aspx">
+      <publishTime>10/11/2021 15:25:40</publishTime>
+    </File>
+    <File Include="XerpReports/Item-Wise-Purchase-Report.aspx">
+      <publishTime>10/16/2019 15:47:53</publishTime>
+    </File>
+    <File Include="XerpReports/LiveBroadcastingReport.aspx">
+      <publishTime>10/21/2021 17:35:09</publishTime>
+    </File>
+    <File Include="XerpReports/LVRegister.aspx">
+      <publishTime>10/11/2021 15:09:27</publishTime>
+    </File>
+    <File Include="XerpReports/LVReport.aspx">
+      <publishTime>10/11/2021 15:09:22</publishTime>
+    </File>
+    <File Include="XerpReports/MaintenanceReport.aspx">
+      <publishTime>10/11/2021 18:58:11</publishTime>
+    </File>
+    <File Include="XerpReports/MeterReadingReport.aspx">
+      <publishTime>10/11/2021 22:55:44</publishTime>
+    </File>
+    <File Include="XerpReports/rptCurrent-Stock-Position.aspx">
+      <publishTime>01/04/2020 18:43:24</publishTime>
+    </File>
+    <File Include="XerpReports/rptDeptConsumption.aspx">
+      <publishTime>10/16/2019 15:47:53</publishTime>
+    </File>
+    <File Include="XerpReports/rptHeader.aspx">
+      <publishTime>10/11/2021 15:09:12</publishTime>
+    </File>
+    <File Include="XerpReports/rptIssuePreRequisition.aspx">
+      <publishTime>10/16/2019 15:47:53</publishTime>
+    </File>
+    <File Include="XerpReports/rptIssueRequisition.aspx">
+      <publishTime>10/16/2019 15:47:53</publishTime>
+    </File>
+    <File Include="XerpReports/rptPOReceive.aspx">
+      <publishTime>10/16/2019 15:47:53</publishTime>
+    </File>
+    <File Include="XerpReports/rptRequisition.aspx">
+      <publishTime>10/16/2019 15:47:53</publishTime>
+    </File>
+    <File Include="XerpReports/rptRequisitionApproval.aspx">
+      <publishTime>10/16/2019 15:47:53</publishTime>
+    </File>
+    <File Include="XerpReports/rptStockIssueHistory.aspx">
+      <publishTime>10/16/2019 15:47:53</publishTime>
+    </File>
+    <File Include="XerpReports/RVRegister.aspx">
+      <publishTime>10/11/2021 15:09:17</publishTime>
+    </File>
+    <File Include="XerpReports/RVReport.aspx">
+      <publishTime>10/11/2021 15:09:07</publishTime>
+    </File>
+    <File Include="XerpReports/Sale_Items.aspx">
+      <publishTime>10/16/2019 15:47:53</publishTime>
+    </File>
+    <File Include="XerpReports/SIRRegister.aspx">
+      <publishTime>10/27/2021 10:47:35</publishTime>
+    </File>
+    <File Include="XerpReports/SIRReport.aspx">
+      <publishTime>10/11/2021 15:08:57</publishTime>
+    </File>
+    <File Include="XerpReports/SubStationReport.aspx">
+      <publishTime>10/18/2021 22:49:34</publishTime>
+    </File>
+    <File Include="XerpReports/TVReport.aspx">
+      <publishTime>10/11/2021 15:08:49</publishTime>
+    </File>
+    <File Include="XerpReports/UPSReport.aspx">
+      <publishTime>10/18/2021 14:29:12</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

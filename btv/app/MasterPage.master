@@ -1,0 +1,587 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="AdminCentral_MasterPage" %>
+
+<%@ Import Namespace="System.Web.Optimization" %>
+<!DOCTYPE HTML>
+<html>
+
+<head runat="server">
+    <%--<title>Super Admin : XERP</title>--%>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <asp:PlaceHolder runat="server">
+        <%--<%: Scripts.Render("~/bundles/modernizr") %>
+         <%: Scripts.Render("~/bundles/jquery") %>
+         <%: Scripts.Render("~/bundles/TopScripts") %>--%>
+    </asp:PlaceHolder>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
+    <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>--%>
+    <script src="../js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="../js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+    <script src="../js/iphone-style-checkboxes.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+
+    <link href="../css/select2.css" rel="stylesheet" />
+
+    <script src="../js/select2.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+            $('#sidenav').find('li.subheading_menu').click(function () {
+                //Expand or collapse this panel
+                $(this).next().slideToggle('slow');
+                //Hide the other panels
+                $("#sidenav ul span").not($(this).next()).slideUp('slow');
+            });
+
+            $('#sidenav ul li.xerp_curr').closest('#sidenav ul span').show();
+            $(".select2me").select2();
+        });
+
+        function callJquery() {
+            $(".select2me").select2();
+            GroupDropDownList();
+        }
+    </script>
+
+
+    <style>
+        li.subheading_menu {
+            cursor: pointer;
+        }
+
+        ul > span > li > a {
+            padding-left: 26px !important;
+        }
+
+        ul.acitem span li.xerp_curr > span {
+            display: block !important;
+        }
+
+        td input.form-control, td select.form-control, td textarea.form-control {
+            margin: 5px 0;
+        }
+
+        /*.select2-container {
+            margin: 5px 0;
+        }*/
+
+        .select2-container .select2-selection--single {
+            height: 33px !important;
+        }
+
+        #login {
+            height: 0px;
+            width: 65px;
+            position: fixed;
+            right: 0;
+            top: 85%;
+            z-index: 1000;
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+            transition: all .2s ease-in-out;
+        }
+
+            #login:hover {
+                right: 10px;
+            }
+
+            #login a {
+                display: block;
+                background: #00b5e8;
+                width: 124px;
+                padding: 8px 14px 26px 11px;
+                color: #fff;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: none;
+                border-radius: 5px 5px 0px 0px;
+                box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+                border: 3px solid #fff;
+                border-bottom: 0px;
+            }
+
+                #login a:hover {
+                    background: #00b5e8;
+                }
+
+        #ctl00_mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9000;
+            background-color: #000;
+            display: none;
+        }
+
+        #boxes .window {
+            position: absolute;
+            left: 27% !important;
+            top: 20%;
+            width: 680px;
+            height: 340px;
+            display: none;
+            z-index: 9999;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        #popupfoot {
+            font-family: "Segoe UI", sans-serif;
+            font-size: 16pt;
+            padding: 10px 20px;
+        }
+
+            #popupfoot .close {
+                float: right;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1.3;
+                color: #ef8120;
+                text-shadow: none;
+                opacity: 10;
+                background: #fff !important;
+                width: 60px;
+                height: 20px;
+                border-radius: 4px;
+            }
+
+            #popupfoot .agree {
+                float: left;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1.3;
+                color: #4ea533;
+                text-shadow: none;
+                opacity: 10;
+                background: #fff !important;
+                width: 180px;
+                height: 20px;
+                border-radius: 4px;
+            }
+
+            #popupfoot a:hover {
+                color: #000;
+                background: #fff !important;
+            }
+
+        .help-tip {
+            display: none;
+            position: relative;
+            text-align: center;
+            background-color: #83aae4;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            font-size: 12px;
+            line-height: 15px;
+            cursor: default;
+            float: right;
+            top: -1px;
+            left: -4px;
+        }
+
+            .help-tip:before {
+                content: '?';
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .help-tip:hover span {
+                display: block;
+                transform-origin: 100% 0%;
+                -webkit-animation: fadeIn 0.3s ease-in-out;
+                animation: fadeIn 0.3s ease-in-out;
+            }
+
+            .help-tip span {
+                display: none;
+                text-align: left;
+                background-color: #1E2021;
+                padding: 5px;
+                width: 200px;
+                position: absolute;
+                border-radius: 3px;
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+                left: -4px;
+                color: #FFF;
+                font-size: 13px;
+                line-height: 1.4;
+            }
+
+                .help-tip span:before {
+                    position: absolute;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border: 6px solid transparent;
+                    border-bottom-color: #1E2021;
+                    left: 10px;
+                    top: -12px;
+                }
+
+                .help-tip span:after {
+                    width: 100%;
+                    height: 40px;
+                    content: '';
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                }
+
+        .btn_24_blue a {
+            width: 100% !important;
+            background: #1e5900 !important;
+        }
+
+        .user-dropdown {
+            position: relative
+        }
+
+            .user-dropdown li ul {
+                width: 100px;
+                position: absolute;
+                top: 49px;
+                left: 0;
+                z-index: 1;
+                background: #fff;
+                opacity:1
+            }
+
+                .user-dropdown li ul li {
+                    border-bottom: 1px solid #1E2021;
+                }
+
+                    .user-dropdown li ul li:last-child {
+                        border-bottom: none
+                    }
+
+                    .user-dropdown li ul li a {
+                        display: block;
+                        padding: 10px
+                    }
+
+                        .user-dropdown li ul li a:hover {
+                            background: #83aae4;
+                            cursor: pointer;
+                        }
+                        .user_nav:hover .user-dropdown li ul{
+                            opacity:0
+
+                        }
+        /*  .navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}*/
+    </style>
+    <link href="../css/Pagination.css" rel="stylesheet" />
+</head>
+<body id="theme-default" class="full_block">
+    <form id="form1" runat="server" autocomplete="off" aria-autocomplete="off">
+        
+
+        <div id="header" class="blue_lin">
+
+            <div class="header_left">
+                <div class="logo">
+                    <asp:Image ID="imgLogo" ImageUrl="../branding/newlogo.png" runat="server" Style="border-width: 0px; margin-top: 3px; max-height: 56px; margin-left: 15px; -webkit-filter: drop-shadow(5px 5px 5px #19d31f);" />
+                </div>
+            </div>
+
+            <div id="mobilemenu">
+                <div id="showmenu"></div>
+                <script>
+                    $(document).ready(function () {
+                        $('#showmenu').toggle(
+                            function () {
+                                $('#left_bar').slideDown("fast");
+                            },
+                            function () {
+                                $('#left_bar').slideUp("fast");
+                            }
+                        );
+                    });
+                </script>
+            </div>
+
+            <div class="header_right">
+                <div id="top_notification">
+                    <ul>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle alert"><span class="icon"></span>
+                                <asp:Label ID="lblPOrder" ClientIDMode="Static" runat="server" Text="0" class="alert_notify" /></a>
+                            <div class="notification_list dropdown-menu pull-left blue_d">
+                                <div class="white_lin nlist_block">
+                                    <ul>
+                                        <asp:Repeater ID="Repeater1" runat="server">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <div class="nlist_thumb">
+                                                        <img src="images/order.png" width="40" height="40" alt="img">
+                                                    </div>
+                                                    <div class="list_inf">
+                                                        <a title="click to edit" href='<%#Eval("link") %>'><%#Eval("OrderDetail") %> </a>
+                                                    </div>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Connection_String %>"
+                                            SelectCommand="SELECT TOP (5) VID, InvoiceNo + '  <br>' + CustomerName AS  OrderDetail FROM BillingMaster Where ProjectID=@ProjectID ORDER BY vid DESC">
+                                            <SelectParameters>
+                                                <asp:ControlParameter Name="ProjectID" ControlID="lblProjectID" PropertyName="Text" />
+                                            </SelectParameters>
+                                        </asp:SqlDataSource>
+
+                                        <asp:Label ID="lblProjectID" runat="server" Visible="False"></asp:Label>
+                                    </ul>
+                                    <span class="btn_24_blue">
+                                        <asp:Repeater ID="Repeater3" runat="server">
+                                            <ItemTemplate>
+                                                <a href='<%#Eval("Url") %>'>Work Flow For#<%#Eval("VoucherNo") %> </a>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+                                        <%--<a href="WorkFlow?Id=8&&type=lv">Work Flow for #lv2019</a>--%>
+
+                                        <%--<a href="Sales-History">View All</a>--%>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="inbox dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="icon"></span>
+                                <asp:Label ID="lblPendingMsg" runat="server" class="alert_notify blue" Text=""></asp:Label>
+                            </a>
+                            <div class="notification_list dropdown-menu blue_d">
+                                <div class="white_lin nlist_block">
+                                    <ul>
+                                        <asp:Repeater ID="Repeater2" runat="server" DataSourceID="SqlDataSource2">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <div class="nlist_thumb">
+                                                        <img src="images/message_icon.png" width="40" height="40" alt="img">
+                                                    </div>
+                                                    <div class="list_inf">
+                                                        <a title="click to read" href='Check-Msg?ID=<%#Eval("MsgID") %>'><%#Eval("OrderDetail") %> </a>
+                                                    </div>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Connection_String %>"
+                                            SelectCommand="SELECT TOP (5) MsgID, Sender + '  <br>' + Convert(varchar,EntryDate) AS  OrderDetail FROM Messaging  where Receiver=@Receiver ORDER BY [MsgID] DESC">
+                                            <SelectParameters>
+                                                <asp:ControlParameter ControlID="lblUser" Name="Receiver" PropertyName="Text" />
+                                            </SelectParameters>
+                                        </asp:SqlDataSource>
+                                        <asp:Label ID="lblUser" runat="server" Text="" Visible="False"></asp:Label>
+
+                                    </ul>
+                                    <span class="btn_24_blue">
+                                        <a href="Post-Message">New Msg</a>
+                                        <a href="Check-Msg">View All</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div id="user_nav">
+                    <ul class="user-dropdown">
+                        <li class="user_thumb"><a href="#"><span class="icon">
+                            <asp:Image ID="imgPhoto" runat="server" Width="32px" /></span></a>
+                            <ul class="hidden">
+                                <li><a>User Profile</a></li>
+                                <li><a>User Profile</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="user_info"><span class="user_name">
+                            <asp:LoginName ID="LoginName1" runat="server" />
+                        </span><span style="font-size: 10px; color: Aqua;">Last Loged-in: <a href="#">
+                            <asp:Label ID="lblLogedIn" runat="server" Text="30-12-2012 14:52:53"></asp:Label></a></span></li>
+                        <li class="logout">
+                            <asp:LinkButton ID="LinkButtonx" runat="server" OnClick="LinkButtonx_Click"><span class="icon"></span>Logout</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="left_bar">
+            <div id="primary_nav" class="g_blue hidden">
+                <ul>
+                    <li id="menuID1" runat="server"><a href="Default" title="Dashboard"><span class="icon_block m_dashboard">Dashboard</span></a></li>
+                    <li id="menuID2" runat="server"><a href="Profile" title="User Profile"><span class="icon_block m_projects">User Profile</span></a></li>
+                    <li id="menuID3" runat="server"><a href="Login-History" title="Login History"><span class="icon_block m_events">Login History</span></a></li>
+                    <li id="menuID4" runat="server"><a href="Help" title="Software Manual"><span class="icon_block p_book">Software Manual</span></a></li>
+                    <li id="menuID5" runat="server"><a href="Documents-Upload" title="Important Documents"><span class="icon_block m_media">Important Documents</span></a></li>
+                    <li id="menuID6" runat="server"><a href="Company" title="Settings"><span class="icon_block m_settings">Settings</span></a></li>
+                </ul>
+            </div>
+            <div id="start_menu hidden">
+            </div>
+			
+            <%--sidebar menu organization--%>
+            <div id="sidebar">
+                <div id="secondary_nav">
+                    <ul id="sidenav" class="menu accordion_mnu collapsible">
+
+                        <asp:Literal ID="ltrMainMenu" runat="server"></asp:Literal>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="container">
+            <asp:ContentPlaceHolder ID="deshboard" runat="server"></asp:ContentPlaceHolder>
+            <asp:Label ID="lblSubscription" runat="server" EnableViewState="False"></asp:Label>
+
+            <div id="content">
+                <div class="grid_container">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+                    </asp:ContentPlaceHolder>
+
+
+                    <span class="clear"></span>
+                </div>
+
+                <div class="developer">
+                    <asp:Literal ID="ltrDeveloper" runat="server" Visible="false"></asp:Literal>. &nbsp;
+                    Powered by- <a href="http://os.com.bd" target="_blank">
+                        <img src="../branding/os.png" alt="Optimum Soft" style="vertical-align: bottom;" />
+                    </a>
+                </div>
+
+                <span class="clear"></span>
+            </div>
+        </div>
+        <div id="boxes">
+            <%--<asp:panel  runat="server" style="top: 199.5px; left: 551.5px; display: none;" id="pnl1stVideo" class="window" Visible="False">
+      <iframe width="620" height="320" src="https://www.youtube.com/embed/60axGwcFZNY?autoplay=1" frameborder="0" allow="autoplay" encrypted-media" allowfullscreen></iframe>
+     
+                   <div id="popupfoot"> <a href="Default?showvid=1" id="btnSkip" runat="server" class="close" >SKIP</a> <a class="agree" href="Default?showvid=0" id="btnDontShow" runat="server" onclick="">Don't Show Me Again</a></div>
+  </%--asp:panel>--%>
+            <asp:Panel Style="width: 1478px; font-size: 32pt; color: white; height: 602px; display: none; opacity: 0.8;" ID="mask" Visible="False" runat="server"></asp:Panel>
+        </div>
+
+    </form>
+    <%-- /End Footer Container --%>
+    <%-- /Busy Loader --%>
+    <div id="IMGDIV" style="display: none; position: fixed; left: 95%; top: 50%; vertical-align: middle; border-style: inset; border-color: black; background-color: White; z-index: 1000;">
+        <img src="../images/loader.gif" alt="Processing... Please Wait." />
+    </div>
+    <%--<div class="loading" align="center">
+        Processing... Please Wait.<br />
+        <br />
+        <img src="../images/loader.gif" alt="" />
+    </div>--%>
+
+    <!-- Load Facebook SDK for JavaScript -->
+
+    <noscript>
+        <meta http-equiv="REFRESH" content="0; url=js-error" />
+    </noscript>
+
+    <%-- Placed at the end of the document so the pages load faster --%>
+    <%--<script src="../js/chosen.jquery.min.js" type="text/javascript"></script>
+    <script src="../js/uniform.jquery.js" type="text/javascript"></script>
+
+    <script src="../js/sticky.full.js" type="text/javascript"></script>
+    <script src="../js/jquery.noty.js" type="text/javascript"></script>
+    <script src="../js/notify.min.js"></script>
+    <script src="../js/selectToUISlider.jQuery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap-colorpicker.js" type="text/javascript"></script>
+    <script src="../js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="../js/jquery.tipsy.js" type="text/javascript"></script>
+
+    <script src="../js/accordion.jquery.js" type="text/javascript"></script>
+    <script src="../js/autogrow.jquery.js" type="text/javascript"></script>
+    <script src="../js/inputmask.jquery.js" type="text/javascript"></script>
+    <script src="../js/stepy.jquery.js" type="text/javascript"></script>
+    <script src="../js/vaidation.jquery.js" type="text/javascript"></script>
+    <script src="../js/custom-scripts.js" type="text/javascript"></script>--%>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/WebFormsJs") %>
+    </asp:PlaceHolder>
+
+    <asp:ContentPlaceHolder ID="Foot" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>

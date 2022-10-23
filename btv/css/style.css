@@ -1,0 +1,569 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+/*--- reset code ---*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol,ul {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+blockquote,q {
+	quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+	content:'';
+	content:none;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+/* start editing from here */
+a {
+	text-decoration:none;
+}
+.txt-rt {
+	text-align:right;
+}/* text align right */
+.txt-lt {
+	text-align:left;
+}/* text align left */
+.txt-center {
+	text-align:center;
+}/* text align center */
+/*-- W3Layouts --*/ 
+.float-rt {
+	float:right;
+}/* float right */
+.float-lt {
+	float:left;
+}/* float left */
+.clear {
+	clear:both;
+}/* clear float */
+.pos-relative {
+	position:relative;
+}/* Position Relative */
+.pos-absolute {
+	position:absolute;
+}/* Position Absolute */
+.vertical-base {	
+	vertical-align:baseline;
+}/* vertical align baseline */
+.vertical-top {	
+	vertical-align:top;
+}/* vertical align top */
+nav.vertical ul li {	
+	display:block;
+}/* vertical menu */
+nav.horizontal ul li {	
+	display: inline-block;
+}/* horizontal menu */
+img {
+	max-width:100%;
+}
+
+/*--- end reset code ---*/
+
+body {
+	margin:0;
+	padding:0;
+	background:url(../branding/bg_f.jpg) no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+    background-position: center;
+	font-family: 'Hind Siliguri','Raleway', sans-serif;
+	font-weight:400;
+}
+.header {
+    text-align: center;
+    margin-top: 2%;
+    margin: 1% auto 0;
+     width: 30%;
+}
+.header h1 {
+	color:#FFFFFF;
+	    line-height: 46px;
+	font-size:40px;
+	text-transform:uppercase;
+	font-weight: 700;
+	font-family: 'Hind Siliguri','Poiret One',cursive,sans-serif;
+}
+img.govLogo{
+    float: left;width:80px;
+}
+
+.xerp_success, .xerp_info {
+    color: #00c2ff;
+    background: darkblue;
+    padding: 1px 8px;
+}
+.xerp_error, .xerp_warn {
+    color: yellow;
+    /* border: 1px darkred; */
+    background: red;
+    padding: 1px 8px;
+}
+/* start booking_room */
+
+.banner-top {
+    min-height:400px;
+    margin: 1% auto 0;
+    width: 35%;
+    padding: 1em 60px 3em;
+        background: rgba(212, 227, 255, 0.91);
+            border-radius: 7px;
+}
+.banner-top h2 {
+	text-align: center;
+	font-size: 2em;
+	font-weight: 600;
+	margin: 0 0 4% 0;
+	color:#044a86;
+	font-family: 'Hind Siliguri','Poiret One',cursive,sans-serif;
+}
+.banner-bottom{
+	margin-top:3%;
+}
+.bnr-left {
+	width:30%;
+	float:left;
+}
+.bnr-right {
+	width:65%;
+	float:right;
+}
+.bnr-left p {
+	color: #044a86;
+	font-size: 16px;
+    font-weight: 400;
+	margin-top: 5%;
+}
+select {
+	padding: 9px 0px 9px 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+	color: #9E9E9E;
+	background: url(../images/arrow.png) no-repeat 95.5% 58% #fff;
+	outline: none;
+	border: none;
+	width:100%;
+	/*-- W3Layouts --*/
+	font-size: 14px;
+	font-weight: 400;
+	cursor: pointer;
+}
+.bnr-one{
+	margin-top:3.3%;
+}
+.bnr-one:nth-child(1){
+	margin-top:0;
+}
+.bnr-right input[type="text"] {
+	width: 100%;
+	color: #044a86;
+	outline: none;
+	/*border-radius:0;*/
+	font-size: 14px;
+	padding: 10px 10px;
+	/*border: none;*/
+	-webkit-appearance: none;
+}
+.bnr-right.time-pic {
+    margin-bottom: -20px;
+}
+input#timepicker {
+    cursor:pointer;
+}
+.date {
+	background: url(../images/date-icon.png) no-repeat 95.5% 45% #fff;
+	cursor: pointer;
+}
+.bnr-btn {
+	margin: 5% auto 0;
+}
+    .bnr-btn input[type=submit], .btn-primary, .btn-primary, .btn-primary, .btn-primary, .btn-primary, .btn { 
+        color: #fff;
+        padding: 7px 25px;
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: 'Hind Siliguri','Poiret One',cursive,sans-serif;
+        background-color: #007bff;
+        border-color: #007bff;
+        outline: none;
+    }
+/*-- AgileITS --*/
+        .bnr-btn input[type=submit]:hover, .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary { 
+            background-color: #00c1cf;
+            background: #258dc8; /* Old browsers */
+            background: -moz-linear-gradient(top, #007bff 0%, #00c1cf 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #007bff 0%,#00c1cf 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #007bff 0%,#00c1cf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8',GradientType=0 ); /* IE6-9 */
+            transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+        }
+
+.footer {
+	margin-top:1%;
+	text-align:center;
+	
+}
+.footer p {
+	color:#fff;
+	font-size:16px;
+	line-height:25px;
+}
+.footer a, a:active {
+	color:#fff;
+	text-decoration:none;
+}
+.footer a:hover {
+	color: #044a86;
+	text-decoration:none;
+	transition:all 0.5s ease-in-out;
+}
+
+/*--responsive-starts-here--*/
+
+
+@media (max-width:1680px){
+.ui-datepicker {
+    width: 18.1%;
+}	
+}
+
+@media (max-width:1440px){
+    .banner-top, .header {
+        width: 40%;
+    }
+}
+
+@media (max-width:1080px){
+	.banner-top {
+    width: 48%;
+}	
+}
+
+@media (max-width: 1050px) {
+.banner-top {
+    width: 50%;
+	/*-- W3Layouts --*/ /*-- AgileITS --*/
+}
+}
+
+@media (max-width:1024px){
+.banner-top {
+    width: 52%;
+}
+}
+
+@media (max-width: 991px) {
+.banner-top {
+    width: 55%;
+}
+}
+
+@media (max-width: 900px){
+.banner-top {
+    width: 60%;
+}
+}
+
+@media (max-width: 800px){
+.banner-top {
+    width: 69%;
+}
+}
+
+@media (max-width: 768px){
+.banner-top {
+    width: 70%;
+}
+}
+
+@media (max-width: 736px){
+.banner-top {
+    width: 75%;
+}	
+.header h1 {
+	font-size: 30px;
+}
+.banner-top h2 {
+	font-size:25px;
+}
+.footer p {
+	font-size:15px;
+}
+}
+
+@media (max-width: 667px){
+	/*-- W3Layouts --*/ /*-- AgileITS --*/
+.banner-top, .header  {
+    width:80%;
+}
+}
+
+@media (max-width: 640px) {
+.banner-top, .header  {
+    width: 85%;
+}
+}
+
+@media (max-width: 600px) {
+.bnr-left p {
+	font-size:15px;
+}
+}
+
+@media (max-width: 568px){
+.banner-top, .header  {
+    padding: 2em 30px 3em;
+}
+.footer p {
+    font-size: 14px;
+}	
+}
+
+@media (max-width: 480px){
+.banner-top, .header  {
+    width:90%;
+	padding: 2em 20px 3em;
+}
+}
+
+@media (max-width: 414px){
+	.header {
+    margin-top: 7%;
+}
+	.banner-top, .header  {
+	margin:7% auto;
+	padding: 2em 20px 3em;
+}
+.bnr-btn input[type=submit] {
+	margin:20px auto 0;
+}
+.bnr-right input[type="text"] {
+    width: 85%;
+}	
+select {
+	margin-left: 10%;
+	width:85%;
+}
+.bnr-left p {
+    width: 130%;
+}
+.footer {
+	margin-top: 15%;
+	margin-bottom:1em;
+}
+.footer p {
+    font-size: 14px;
+	padding: 0 20px;
+}
+}
+
+@media (max-width: 384px){
+	.header h1 {
+    font-size: 25px;
+}
+.banner-top h2 {
+    font-size: 23px;
+}
+select {
+	margin-left:38px;
+}
+}
+
+@media (max-width: 375px){
+.bnr-left p {
+    width: 135%;
+}
+.bnr-right {
+    width: 70%;
+}
+select {
+    margin-left: 39px;
+}
+}
+
+@media (max-width: 320px) {
+.bnr-left p {
+    width: 100px;
+    font-size: 13px;
+    margin-left: 1px;
+}
+.bnr-right input[type="text"] {
+    width: 80%;
+    margin-left: 36px;
+}
+select {
+    margin-left: 36px;
+	width:80%;
+}
+.header h1 {
+    font-size: 20px;
+}
+.banner-top h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.banner-top {
+	padding: 2em 20px;
+}
+.wickedpicker {
+    width: 131px!important;
+}
+}
+/* Error Messages */
+.xerp_info, .xerp_success, .xerp_warning, .xerp_warn, .xerp_error, .xerp_stop {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 10px 10px 10px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    display: block;
+}
+
+.xerp_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('../Images/info.png');
+}
+
+.xerp_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url('../Images/success.png');
+}
+
+.xerp_warning, .xerp_warn {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('../Images/warning.png');
+}
+
+.xerp_error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../Images/error.png');
+}
+
+.xerp_stop {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('../Images/stop.png');
+}
+/* End Error Messages */
+
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    #myImg:hover {
+        opacity: 0.7;
+    }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}

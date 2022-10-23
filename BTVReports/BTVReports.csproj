@@ -1,0 +1,1044 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCD6B1CF-EC19-4410-A0D4-B060C2202E75}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oxford</RootNamespace>
+    <AssemblyName>Oxford</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>E:\Shohel\MRC XFSM\MRCReports\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>E:\Shohel\MRC XFSM\MRCReports\bin\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="CRVsPackageLib, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Azad\Web Apps\CUET\XHRM\bin\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Azad\Web Apps\CUET\XHRM\bin\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Azad\Web Apps\CUET\XHRM\bin\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Azad\Web Apps\CUET\XHRM\bin\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\AccLink.aspx" />
+    <Content Include="app\AddNewBook.aspx" />
+    <Content Include="app\Admission.aspx" />
+    <Content Include="app\Admit-Card.aspx" />
+    <Content Include="app\AssaignClassExpenses.aspx" />
+    <Content Include="app\AssaignOtherExpenses.aspx" />
+    <Content Include="app\AssaignStudentExpenses.aspx" />
+    <Content Include="app\Assign-Roll-Section.aspx" />
+    <Content Include="app\Billing.aspx" />
+    <Content Include="app\BookGiven.aspx" />
+    <Content Include="app\BookTaken.aspx" />
+    <Content Include="app\ChangePass.aspx" />
+    <Content Include="app\ChangeRollClass.aspx" />
+    <Content Include="app\ClassSetup.aspx" />
+    <Content Include="app\Coll-Group.aspx" />
+    <Content Include="app\Coll-Heads.aspx" />
+    <Content Include="app\Coll-History.aspx" />
+    <Content Include="app\Control.aspx" />
+    <Content Include="app\Default.aspx" />
+    <Content Include="app\DefaulterList.aspx" />
+    <Content Include="app\DiscountToStudents.aspx" />
+    <Content Include="app\Exp-Group.aspx" />
+    <Content Include="app\Exp-Heads.aspx" />
+    <Content Include="app\Exp-History.aspx" />
+    <Content Include="app\Expense-Entry.aspx" />
+    <Content Include="app\Gateway-Settings.aspx" />
+    <Content Include="app\Head.aspx" />
+    <Content Include="app\ID-Card.aspx" />
+    <Content Include="app\images\approve.gif" />
+    <Content Include="app\images\avatar.jpg" />
+    <Content Include="app\images\back32.png" />
+    <Content Include="app\images\delete.gif" />
+    <Content Include="app\images\delete.png" />
+    <Content Include="app\images\edit.png" />
+    <Content Include="app\images\for.jpg" />
+    <Content Include="app\images\id-bg.png" />
+    <Content Include="app\loader.gif" />
+    <Content Include="app\Login-History.aspx" />
+    <Content Include="app\Logout.aspx" />
+    <Content Include="app\Money-Collection.aspx" />
+    <Content Include="app\MonthlyProcess.aspx" />
+    <Content Include="app\MonthlyProcessSetup.aspx" />
+    <Content Include="app\New-User.aspx" />
+    <Content Include="app\Particulars.aspx" />
+    <Content Include="app\Search.aspx" />
+    <Content Include="app\SectionSetup.aspx" />
+    <Content Include="app\Send-SMS.aspx" />
+    <Content Include="app\SMS-Template.aspx" />
+    <Content Include="app\Student-Info.aspx" />
+    <Content Include="app\Student-List.aspx" />
+    <Content Include="app\SubAcc.aspx" />
+    <Content Include="app\Teachers.aspx" />
+    <Content Include="app\VoucherApproval.aspx" />
+    <Content Include="app\VoucherCancel.aspx" />
+    <Content Include="app\VoucherEntry.aspx" />
+    <Content Include="app\YearlyProcess.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AjaxMin.dll" />
+    <Content Include="bin\Oxford.dll" />
+    <Content Include="bin\Oxford.pdb" />
+    <Content Include="css\app.v1.css" />
+    <Content Include="css\app.v1.js" />
+    <Content Include="css\Custom.css" />
+    <Content Include="css\font.css" />
+    <Content Include="css\img\error-s.png" />
+    <Content Include="css\img\error.png" />
+    <Content Include="css\img\good-warning-error.png" />
+    <Content Include="css\img\info.png" />
+    <Content Include="css\img\info2.png" />
+    <Content Include="css\img\stop.png" />
+    <Content Include="css\img\success.png" />
+    <Content Include="css\img\warning-error.png" />
+    <Content Include="css\img\warning.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="font\fontawesome-webfont.svg" />
+    <Content Include="js\apps\notes.js" />
+    <Content Include="js\apps\notify.min.js" />
+    <Content Include="js\apps\tasks.js" />
+    <Content Include="js\jquery-latest.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XerpReports\AirConditionFCUReport.aspx" />
+    <Content Include="XerpReports\AirHandlingUnitReport.aspx" />
+    <Content Include="XerpReports\ChillerReport.aspx" />
+    <Content Include="XerpReports\DailyMaintenanceReport.aspx" />
+    <Content Include="XerpReports\DailyTransmitterReport.aspx" />
+    <Content Include="XerpReports\DehumidiferReport.aspx" />
+    <Content Include="XerpReports\EarthStationReport.aspx" />
+    <Content Include="XerpReports\GRNRegister.aspx" />
+    <Content Include="XerpReports\GRNReport.aspx" />
+    <Content Include="XerpReports\LiveBroadcastingReport.aspx" />
+    <Content Include="XerpReports\LVRegister.aspx" />
+    <Content Include="XerpReports\LVReport.aspx" />
+    <Content Include="XerpReports\MaintenanceReport.aspx" />
+    <Content Include="XerpReports\MeterReadingReport.aspx" />
+    <Content Include="XerpReports\rptHeader.aspx" />
+    <Content Include="XerpReports\RVRegister.aspx" />
+    <Content Include="XerpReports\RVReport.aspx" />
+    <Content Include="XerpReports\SIRRegister.aspx" />
+    <Content Include="XerpReports\SIRReport.aspx" />
+    <Content Include="XerpReports\SubStationReport.aspx" />
+    <Content Include="XerpReports\TVReport.aspx" />
+    <Content Include="XerpReports\UPSReport.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\Admit-Card.aspx.cs">
+      <DependentUpon>Admit-Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Admit-Card.aspx.designer.cs">
+      <DependentUpon>Admit-Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Assign-Roll-Section.aspx.cs">
+      <DependentUpon>Assign-Roll-Section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Assign-Roll-Section.aspx.designer.cs">
+      <DependentUpon>Assign-Roll-Section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Billing.aspx.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Billing.aspx.designer.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\ChangePass.aspx.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\ChangePass.aspx.designer.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Coll-Group.aspx.cs">
+      <DependentUpon>Coll-Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Coll-Group.aspx.designer.cs">
+      <DependentUpon>Coll-Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Coll-Heads.aspx.cs">
+      <DependentUpon>Coll-Heads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Coll-Heads.aspx.designer.cs">
+      <DependentUpon>Coll-Heads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Coll-History.aspx.cs">
+      <DependentUpon>Coll-History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Coll-History.aspx.designer.cs">
+      <DependentUpon>Coll-History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Exp-Group.aspx.cs">
+      <DependentUpon>Exp-Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Exp-Group.aspx.designer.cs">
+      <DependentUpon>Exp-Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Exp-Heads.aspx.cs">
+      <DependentUpon>Exp-Heads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Exp-Heads.aspx.designer.cs">
+      <DependentUpon>Exp-Heads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Exp-History.aspx.cs">
+      <DependentUpon>Exp-History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Exp-History.aspx.designer.cs">
+      <DependentUpon>Exp-History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Expense-Entry.aspx.cs">
+      <DependentUpon>Expense-Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Expense-Entry.aspx.designer.cs">
+      <DependentUpon>Expense-Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Gateway-Settings.aspx.cs">
+      <DependentUpon>Gateway-Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Gateway-Settings.aspx.designer.cs">
+      <DependentUpon>Gateway-Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Head.aspx.cs">
+      <DependentUpon>Head.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Head.aspx.designer.cs">
+      <DependentUpon>Head.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\ID-Card.aspx.cs">
+      <DependentUpon>ID-Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\ID-Card.aspx.designer.cs">
+      <DependentUpon>ID-Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Login-History.aspx.cs">
+      <DependentUpon>Login-History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Login-History.aspx.designer.cs">
+      <DependentUpon>Login-History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Money-Collection.aspx.cs">
+      <DependentUpon>Money-Collection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Money-Collection.aspx.designer.cs">
+      <DependentUpon>Money-Collection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\New-User.aspx.cs">
+      <DependentUpon>New-User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\New-User.aspx.designer.cs">
+      <DependentUpon>New-User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Send-SMS.aspx.cs">
+      <DependentUpon>Send-SMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Send-SMS.aspx.designer.cs">
+      <DependentUpon>Send-SMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\SMS-Template.aspx.cs">
+      <DependentUpon>SMS-Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\SMS-Template.aspx.designer.cs">
+      <DependentUpon>SMS-Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Student-Info.aspx.cs">
+      <DependentUpon>Student-Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Student-Info.aspx.designer.cs">
+      <DependentUpon>Student-Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Student-List.aspx.cs">
+      <DependentUpon>Student-List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Student-List.aspx.designer.cs">
+      <DependentUpon>Student-List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Accounting.cs" />
+    <Compile Include="XerpDataSet.cs">
+      <DependentUpon>XerpDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\AirConditionFCUReport.aspx.cs">
+      <DependentUpon>AirConditionFCUReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\AirConditionFCUReport.aspx.designer.cs">
+      <DependentUpon>AirConditionFCUReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\AirHandlingUnitReport.aspx.cs">
+      <DependentUpon>AirHandlingUnitReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\AirHandlingUnitReport.aspx.designer.cs">
+      <DependentUpon>AirHandlingUnitReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\ChillerReport.aspx.cs">
+      <DependentUpon>ChillerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\ChillerReport.aspx.designer.cs">
+      <DependentUpon>ChillerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\CrptAirConditionFCU.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptAirConditionFCU.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptAirHandlingUnit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptAirHandlingUnit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptChiller.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptChiller.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptDailyMaintenance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptDailyMaintenance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptDailyTranmitterReportThales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptDailyTranmitterReportThales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptDehumidifier.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptDehumidifier.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptEarthStation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptEarthStation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptGrnRegister.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptGrnRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptGRNReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptGRNReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptHeader.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptHeader.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptLiveBroadcasting.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptLiveBroadcasting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptLVRegister.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptLVRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptLVReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptLVReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptMaintenance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptMaintenance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptMeterReading.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptMeterReading.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptRVRegister.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptRVRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptRVReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptRVReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptSirRegister.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptSirRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptSirReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptSirReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptSubStation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptSubStation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptTVReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptTVReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\CrptUPS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrptUPS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XerpReports\DailyMaintenanceReport.aspx.cs">
+      <DependentUpon>DailyMaintenanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\DailyMaintenanceReport.aspx.designer.cs">
+      <DependentUpon>DailyMaintenanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\DailyTransmitterReport.aspx.cs">
+      <DependentUpon>DailyTransmitterReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\DailyTransmitterReport.aspx.designer.cs">
+      <DependentUpon>DailyTransmitterReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\DehumidiferReport.aspx.cs">
+      <DependentUpon>DehumidiferReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\DehumidiferReport.aspx.designer.cs">
+      <DependentUpon>DehumidiferReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\EarthStationReport.aspx.cs">
+      <DependentUpon>EarthStationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\EarthStationReport.aspx.designer.cs">
+      <DependentUpon>EarthStationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\GRNRegister.aspx.cs">
+      <DependentUpon>GRNRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\GRNRegister.aspx.designer.cs">
+      <DependentUpon>GRNRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\GRNReport.aspx.cs">
+      <DependentUpon>GRNReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\GRNReport.aspx.designer.cs">
+      <DependentUpon>GRNReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\LiveBroadcastingReport.aspx.cs">
+      <DependentUpon>LiveBroadcastingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\LiveBroadcastingReport.aspx.designer.cs">
+      <DependentUpon>LiveBroadcastingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\LVRegister.aspx.cs">
+      <DependentUpon>LVRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\LVRegister.aspx.designer.cs">
+      <DependentUpon>LVRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\LVReport.aspx.cs">
+      <DependentUpon>LVReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\LVReport.aspx.designer.cs">
+      <DependentUpon>LVReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\MaintenanceReport.aspx.cs">
+      <DependentUpon>MaintenanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\MaintenanceReport.aspx.designer.cs">
+      <DependentUpon>MaintenanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\MeterReadingReport.aspx.cs">
+      <DependentUpon>MeterReadingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\MeterReadingReport.aspx.designer.cs">
+      <DependentUpon>MeterReadingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\rptHeader.aspx.cs">
+      <DependentUpon>rptHeader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\rptHeader.aspx.designer.cs">
+      <DependentUpon>rptHeader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\RVRegister.aspx.cs">
+      <DependentUpon>RVRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\RVRegister.aspx.designer.cs">
+      <DependentUpon>RVRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\RVReport.aspx.cs">
+      <DependentUpon>RVReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\RVReport.aspx.designer.cs">
+      <DependentUpon>RVReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\SIRRegister.aspx.cs">
+      <DependentUpon>SIRRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\SIRRegister.aspx.designer.cs">
+      <DependentUpon>SIRRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\SIRReport.aspx.cs">
+      <DependentUpon>SIRReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\SIRReport.aspx.designer.cs">
+      <DependentUpon>SIRReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\SubStationReport.aspx.cs">
+      <DependentUpon>SubStationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\SubStationReport.aspx.designer.cs">
+      <DependentUpon>SubStationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\TVReport.aspx.cs">
+      <DependentUpon>TVReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\TVReport.aspx.designer.cs">
+      <DependentUpon>TVReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XerpReports\UPSReport.aspx.cs">
+      <DependentUpon>UPSReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XerpReports\UPSReport.aspx.designer.cs">
+      <DependentUpon>UPSReport.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\CRHelper.cs" />
+    <Compile Include="App_Code\DropDownListAdapter.cs" />
+    <Content Include="App_Code\ReportHelper.cs" />
+    <Compile Include="App_Code\URLRewriter.cs" />
+    <Compile Include="app\AccLink.aspx.cs">
+      <DependentUpon>AccLink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\AccLink.aspx.designer.cs">
+      <DependentUpon>AccLink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\AddNewBook.aspx.cs">
+      <DependentUpon>AddNewBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\AddNewBook.aspx.designer.cs">
+      <DependentUpon>AddNewBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Admission.aspx.cs">
+      <DependentUpon>Admission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Admission.aspx.designer.cs">
+      <DependentUpon>Admission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\AssaignClassExpenses.aspx.cs">
+      <DependentUpon>AssaignClassExpenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\AssaignClassExpenses.aspx.designer.cs">
+      <DependentUpon>AssaignClassExpenses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\AssaignOtherExpenses.aspx.cs">
+      <DependentUpon>AssaignOtherExpenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\AssaignOtherExpenses.aspx.designer.cs">
+      <DependentUpon>AssaignOtherExpenses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\AssaignStudentExpenses.aspx.cs">
+      <DependentUpon>AssaignStudentExpenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\AssaignStudentExpenses.aspx.designer.cs">
+      <DependentUpon>AssaignStudentExpenses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\BookGiven.aspx.cs">
+      <DependentUpon>BookGiven.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\BookGiven.aspx.designer.cs">
+      <DependentUpon>BookGiven.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\BookTaken.aspx.cs">
+      <DependentUpon>BookTaken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\BookTaken.aspx.designer.cs">
+      <DependentUpon>BookTaken.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\ChangeRollClass.aspx.cs">
+      <DependentUpon>ChangeRollClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\ChangeRollClass.aspx.designer.cs">
+      <DependentUpon>ChangeRollClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\ClassSetup.aspx.cs">
+      <DependentUpon>ClassSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\ClassSetup.aspx.designer.cs">
+      <DependentUpon>ClassSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Control.aspx.cs">
+      <DependentUpon>Control.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Control.aspx.designer.cs">
+      <DependentUpon>Control.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\DefaulterList.aspx.cs">
+      <DependentUpon>DefaulterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\DefaulterList.aspx.designer.cs">
+      <DependentUpon>DefaulterList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\DiscountToStudents.aspx.cs">
+      <DependentUpon>DiscountToStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\DiscountToStudents.aspx.designer.cs">
+      <DependentUpon>DiscountToStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Layout.Master.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Layout.Master.designer.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="app\MonthlyProcess.aspx.cs">
+      <DependentUpon>MonthlyProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\MonthlyProcess.aspx.designer.cs">
+      <DependentUpon>MonthlyProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\MonthlyProcessSetup.aspx.cs">
+      <DependentUpon>MonthlyProcessSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\MonthlyProcessSetup.aspx.designer.cs">
+      <DependentUpon>MonthlyProcessSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Particulars.aspx.cs">
+      <DependentUpon>Particulars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Particulars.aspx.designer.cs">
+      <DependentUpon>Particulars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\SectionSetup.aspx.cs">
+      <DependentUpon>SectionSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\SectionSetup.aspx.designer.cs">
+      <DependentUpon>SectionSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\SubAcc.aspx.cs">
+      <DependentUpon>SubAcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\SubAcc.aspx.designer.cs">
+      <DependentUpon>SubAcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Teachers.aspx.cs">
+      <DependentUpon>Teachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Teachers.aspx.designer.cs">
+      <DependentUpon>Teachers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\VoucherApproval.aspx.cs">
+      <DependentUpon>VoucherApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\VoucherApproval.aspx.designer.cs">
+      <DependentUpon>VoucherApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\VoucherCancel.aspx.cs">
+      <DependentUpon>VoucherCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\VoucherCancel.aspx.designer.cs">
+      <DependentUpon>VoucherCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\VoucherEntry.aspx.cs">
+      <DependentUpon>VoucherEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\VoucherEntry.aspx.designer.cs">
+      <DependentUpon>VoucherEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\YearlyProcess.aspx.cs">
+      <DependentUpon>YearlyProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\YearlyProcess.aspx.designer.cs">
+      <DependentUpon>YearlyProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\RunQuery.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pathshala.cs">
+      <DependentUpon>Pathshala.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pathshala.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pathshala.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XerpDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XerpDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="font\fontawesome-webfont.eot" />
+    <Content Include="font\fontawesome-webfont.eot%40" />
+    <Content Include="font\fontawesome-webfont.ttf" />
+    <Content Include="font\fontawesome-webfont.woff" />
+    <Content Include="app\Layout.Master" />
+    <Content Include="app\web.config" />
+    <Content Include="Pathshala.xsc">
+      <DependentUpon>Pathshala.xsd</DependentUpon>
+    </Content>
+    <None Include="Pathshala.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pathshala.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Pathshala.xss">
+      <DependentUpon>Pathshala.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\pathshala.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="XerpDataSet.xsc">
+      <DependentUpon>XerpDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="XerpDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>XerpDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="XerpDataSet.xss">
+      <DependentUpon>XerpDataSet.xsd</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\StudentsPhoto\" />
+    <Folder Include="app\Uploads\Photos\Students\" />
+    <Folder Include="app\Uploads\Photos\Teachers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XerpReports\CrptAirConditionFCU.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptAirConditionFCU.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptAirHandlingUnit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptAirHandlingUnit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptChiller.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptChiller.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptDailyMaintenance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptDailyMaintenance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptDailyTranmitterReportThales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptDailyTranmitterReportThales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptDehumidifier.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptDehumidifier.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptEarthStation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptEarthStation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptGrnRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptGrnRegister.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptGRNReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptGRNReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptHeader.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptHeader.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptLiveBroadcasting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptLiveBroadcasting.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptLVRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptLVRegister.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptLVReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptLVReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptMaintenance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptMaintenance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptMeterReading.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptMeterReading.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptRVRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptRVRegister.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptRVReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptRVReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptSirRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptSirRegister.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptSirReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptSirReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptSubStation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptSubStation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptTVReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptTVReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XerpReports\CrptUPS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrptUPS.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,103 @@
+﻿using System;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Web;
+using CrystalDecisions.CrystalReports.Engine;
+using RunQuery;
+
+
+namespace Oxford.XerpReports
+{
+    public partial class UPSReport : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            LoadGridData();
+        }
+
+        ReportDocument rpt = new ReportDocument();
+        private void LoadGridData()
+        {
+            string lName = Page.User.Identity.Name.ToString();
+
+            //bool isPdf = Convert.ToBoolean(Request.QueryString["IsPdf"]);
+            //bool isExcel = Convert.ToBoolean(Request.QueryString["IsExcel"]);
+            //bool isWord = Convert.ToBoolean(Request.QueryString["IsWord"]);
+
+
+            string dateFrom = Convert.ToString(Request.QueryString["DateForm"]);
+            string dateTo = Convert.ToString(Request.QueryString["DateTo"]);
+
+            string mainOfficeId = Convert.ToString(Request.QueryString["MainOfficeId"]);
+            //string locationId = Convert.ToString(Request.QueryString["LocationId"]);
+            string strQuery = String.Empty;
+            if (mainOfficeId != "0")
+            {
+                strQuery = " AND (MainOfficeId='" + mainOfficeId + "')";
+            }
+            //if (locationId != "0")
+            //{
+            //    strQuery += " AND (LocationId='" + locationId + "')";
+            //}
+            SqlCommand cmd = new SqlCommand();
+            if (mainOfficeId != "0")
+            {
+                cmd = new SqlCommand(@"SELECT MainOfficeId, MainOfficeName, LocationId, MainOfficeLocationName, Date, Model, I1, I2, I3, U12, U13, U14, V1, V2, V3, [Load], Maintenance, Remarks, ShiftInChargeId, ShiftInChargeName
+FROM VwUPS WHERE (Date >= '" + Convert.ToDateTime(dateFrom).ToString("yyyy-MM-dd") + "') AND (Date <= '" + Convert.ToDateTime(dateTo).ToString("yyyy-MM-dd") + "') " + strQuery + " ORDER BY Date, MainOfficeId", new SqlConnection(ConfigurationManager.ConnectionStrings["Connection_String"].ConnectionString));
+            }
+            else
+            {
+                cmd = new SqlCommand(@"SELECT MainOfficeId, MainOfficeName, LocationId, CONCAT(MainOfficeName,'-',MainOfficeLocationName) AS MainOfficeLocationName, Date, Model, I1, I2, I3, U12, U13, U14, V1, V2, V3, [Load], Maintenance, Remarks, ShiftInChargeId, ShiftInChargeName
+FROM VwUPS WHERE (Date >= '" + Convert.ToDateTime(dateFrom).ToString("yyyy-MM-dd") + "') AND (Date <= '" + Convert.ToDateTime(dateTo).ToString("yyyy-MM-dd") + "') " + strQuery + " ORDER BY Date, MainOfficeId", new SqlConnection(ConfigurationManager.ConnectionStrings["Connection_String"].ConnectionString));
+            }
+
+            cmd.Connection.Open();
+            SqlDataReader dr7 = cmd.ExecuteReader();
+            XerpDataSet ds = new XerpDataSet();
+            ds.Load(dr7, LoadOption.OverwriteChanges, ds.VwUPS);
+            cmd.Connection.Close();
+
+            rpt.Load(Server.MapPath("CrptUPS.rpt"));
+
+            string datefield = "From " + Convert.ToDateTime(dateFrom).ToString("dd/MM/yyyy") + " to " + Convert.ToDateTime(dateTo).ToString("dd/MM/yyyy");
+            rpt.SetDataSource(ds);
+            string mainOfficeName = "";
+            if (mainOfficeId == "0")
+            {
+                mainOfficeName = "All Stations";
+            }
+            else
+            {
+                mainOfficeName = SQLQuery.ReturnString("SELECT Name FROM Location WHERE LocationID = '" + mainOfficeId + "'");
+            }
+
+            //SQLQuery.LoadrptHeader(ds, rpt);
+            rpt.SetParameterValue("@date", datefield);
+            rpt.SetParameterValue("@mainOfficeName", mainOfficeName);
+            //CrystalReportViewer1.ReportSource = rpt;
+            rpt.ExportToHttpResponse(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, HttpContext.Current.Response, false, "DehumidifierReport");
+            rpt.Close();
+            rpt.Dispose();
+            CrystalReportViewer1.Dispose();
+        }
+        protected void CrystalReportViewer1_OnUnload(object sender, EventArgs e)
+        {
+            rpt.Close();
+            rpt.Dispose();
+            CrystalReportViewer1.Dispose();
+        }
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            rpt.Close();
+            rpt.Dispose();
+            CrystalReportViewer1.Dispose();
+        }
+        protected override void OnUnload(EventArgs e)
+        {
+            rpt.Close();
+            rpt.Dispose();
+            CrystalReportViewer1.Dispose();
+        }
+    }
+}

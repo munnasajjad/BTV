@@ -1,0 +1,43 @@
+﻿/* Error Messages */
+.xerp_info, .xerp_success, .xerp_warning, .xerp_warn, .xerp_error, .xerp_stop {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 10px 10px 10px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    display: block;
+}
+
+.xerp_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('../Images/info.png');
+}
+
+.xerp_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url('../Images/success.png');
+}
+
+.xerp_warning, .xerp_warn {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('../Images/warning.png');
+}
+
+.xerp_error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../Images/error.png');
+}
+
+.xerp_stop {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('../Images/stop.png');
+}
+/* End Error Messages */
